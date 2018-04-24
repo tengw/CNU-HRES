@@ -1,0 +1,154 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2016  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+# Date created = 20:36:06  June 14, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FM10_TOP_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M25SAE144C8G
+set_global_assignment -name TOP_LEVEL_ENTITY FM10_TOP
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:36:06  JUNE 14, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+
+## Pin file
+source ../synthesis/FM10_pin_file.tcl
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_27 -to clock_50Mhz
+set_location_assignment PIN_6 -to b27
+set_location_assignment PIN_7 -to b29
+set_location_assignment PIN_8 -to b18
+set_location_assignment PIN_10 -to b20
+set_location_assignment PIN_11 -to b26
+set_location_assignment PIN_12 -to b30
+set_location_assignment PIN_13 -to b28
+set_location_assignment PIN_14 -to b24
+set_location_assignment PIN_17 -to t29
+set_location_assignment PIN_21 -to t27
+set_location_assignment PIN_22 -to t20
+set_location_assignment PIN_24 -to tb19
+set_location_assignment PIN_25 -to tb17
+set_location_assignment PIN_26 -to t18
+set_location_assignment PIN_28 -to CAN_SHDN
+set_location_assignment PIN_29 -to t30
+set_location_assignment PIN_30 -to t28
+set_location_assignment PIN_32 -to t26
+set_location_assignment PIN_33 -to t24
+set_location_assignment PIN_121 -to RST_N
+set_location_assignment PIN_122 -to tb8
+set_location_assignment PIN_123 -to b14
+set_location_assignment PIN_130 -to t14
+set_location_assignment PIN_131 -to CAN_TXD
+set_location_assignment PIN_132 -to CAN_RXD
+set_location_assignment PIN_134 -to t16_LED0
+set_location_assignment PIN_135 -to tb9
+set_location_assignment PIN_140 -to tb11
+set_location_assignment PIN_141 -to b16
+set_location_assignment PIN_101 -to FFC20
+set_location_assignment PIN_124 -to USB_UART_TX
+set_location_assignment PIN_120 -to USB_UART_RX
+
+## Programming included files
+set_global_assignment -name VHDL_FILE ../rtl/FM10_top.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_location_assignment PIN_70 -to SRAM_A[0]
+set_location_assignment PIN_69 -to SRAM_A[1]
+set_location_assignment PIN_66 -to SRAM_A[2]
+set_location_assignment PIN_65 -to SRAM_A[3]
+set_location_assignment PIN_64 -to SRAM_A[4]
+set_location_assignment PIN_111 -to SRAM_CE_N
+set_location_assignment PIN_61 -to SRAM_D[0]
+set_location_assignment PIN_60 -to SRAM_D[1]
+set_location_assignment PIN_59 -to SRAM_D[2]
+set_location_assignment PIN_58 -to SRAM_D[3]
+set_location_assignment PIN_55 -to SRAM_D[4]
+set_location_assignment PIN_54 -to SRAM_D[5]
+set_location_assignment PIN_47 -to SRAM_D[6]
+set_location_assignment PIN_46 -to SRAM_D[7]
+set_location_assignment PIN_45 -to SRAM_WE_N
+set_location_assignment PIN_44 -to SRAM_A[5]
+set_location_assignment PIN_43 -to SRAM_A[6]
+set_location_assignment PIN_41 -to SRAM_A[7]
+set_location_assignment PIN_39 -to SRAM_A[8]
+set_location_assignment PIN_38 -to SRAM_A[9]
+set_location_assignment PIN_56 -to SRAM_A[10]
+set_location_assignment PIN_48 -to SRAM_A[11]
+set_location_assignment PIN_57 -to SRAM_A[12]
+set_location_assignment PIN_50 -to SRAM_A[13]
+set_location_assignment PIN_52 -to SRAM_A[14]
+set_location_assignment PIN_119 -to SRAM_D[8]
+set_location_assignment PIN_118 -to SRAM_D[9]
+set_location_assignment PIN_114 -to SRAM_D[10]
+set_location_assignment PIN_113 -to SRAM_D[11]
+set_location_assignment PIN_112 -to SRAM_D[12]
+set_location_assignment PIN_62 -to SRAM_D[13]
+set_location_assignment PIN_76 -to SRAM_D[14]
+set_location_assignment PIN_74 -to SRAM_D[15]
+set_location_assignment PIN_75 -to SRAM_LB_N
+set_location_assignment PIN_93 -to SRAM_UB_N
+set_location_assignment PIN_92 -to SRAM_OE_N
+set_location_assignment PIN_77 -to SRAM_A[15]
+set_location_assignment PIN_78 -to SRAM_A[16]
+set_location_assignment PIN_81 -to SRAM_A[17]
+
+set_location_assignment PIN_79 -to CAM_Dout[11]
+set_location_assignment PIN_80 -to CAM_PIXCLK
+set_location_assignment PIN_84 -to CAM_Dout[10]
+set_location_assignment PIN_85 -to CAM_Dout[9]
+set_location_assignment PIN_86 -to CAM_Dout[8]
+set_location_assignment PIN_87 -to CAM_Dout[7]
+set_location_assignment PIN_88 -to CAM_Dout[6]
+set_location_assignment PIN_89 -to CAM_Dout[5]
+set_location_assignment PIN_90 -to CAM_Dout[4]
+set_location_assignment PIN_91 -to CAM_Dout[3]
+set_location_assignment PIN_96 -to CAM_Dout[2]
+set_location_assignment PIN_97 -to CAM_Dout[1]
+set_location_assignment PIN_98 -to CAM_Dout[0]
+set_location_assignment PIN_99 -to CAM_LINE_VALID
+set_location_assignment PIN_100 -to CAM_FRAME_VALID
+set_location_assignment PIN_102 -to CAM_RST_BAR
+set_location_assignment PIN_105 -to CAM_TRIGGER
+set_location_assignment PIN_106 -to CAM_OE_BAR
+set_location_assignment PIN_110 -to CAM_STANDBY
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
