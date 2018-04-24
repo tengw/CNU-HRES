@@ -112,7 +112,7 @@ ENTITY FM10_TOP is port(
     -- CAN BUS
     CAN_SHDN : out std_logic;
     CAN_TXD  : out std_logic;
-    CAN_RXD  : in  std_logic
+    CAN_RXD  : in  std_logic;
 
     -- SRAM Controller
     SRAM_A  : inout std_logic_vector (17 downto 0);
@@ -121,7 +121,7 @@ ENTITY FM10_TOP is port(
     SRAM_WE_N  : out std_logic;
     SRAM_LB_N  : out std_logic;
     SRAM_UB_N  : out std_logic;
-    SRAM_OE_N  : out std_logic;
+    SRAM_OE_N  : out std_logic
 );
 END FM10_TOP;
 

@@ -39,45 +39,6 @@ set_location_assignment PIN_140 -to tb11
 set_location_assignment PIN_141 -to b16
 
 # SRAM
-set_location_assignment PIN_70 -to SRAM_A[O]
-set_location_assignment PIN_69 -to SRAM_A[1]
-set_location_assignment PIN_66 -to SRAM_A[2]
-set_location_assignment PIN_65 -to SRAM_A[3]
-set_location_assignment PIN_64 -to SRAM_A[4]
-set_location_assignment PIN_111 -to SRAM_CE_N
-set_location_assignment PIN_61 -to SRAM_D[0]
-set_location_assignment PIN_60 -to SRAM_D[1]
-set_location_assignment PIN_59 -to SRAM_D[2]
-set_location_assignment PIN_58 -to SRAM_D[3]
-set_location_assignment PIN_55 -to SRAM_D[4]
-set_location_assignment PIN_54 -to SRAM_D[5]
-set_location_assignment PIN_47 -to SRAM_D[6]
-set_location_assignment PIN_46 -to SRAM_D[7]
-set_location_assignment PIN_45 -to SRAM_WE_N
-set_location_assignment PIN_44 -to SRAM_A[5]
-set_location_assignment PIN_43 -to SRAM_A[6]
-set_location_assignment PIN_41 -to SRAM_A[7]
-set_location_assignment PIN_39 -to SRAM_A[8]
-set_location_assignment PIN_38 -to SRAM_A[9]
-set_location_assignment PIN_56 -to SRAM_A[10]
-set_location_assignment PIN_48 -to SRAM_A[11]
-set_location_assignment PIN_57 -to SRAM_A[12]
-set_location_assignment PIN_50 -to SRAM_A[13]
-set_location_assignment PIN_52 -to SRAM_A[14]
-set_location_assignment PIN_119 -to SRAM_D[8]
-set_location_assignment PIN_118 -to SRAM_D[9]
-set_location_assignment PIN_114 -to SRAM_D[10]
-set_location_assignment PIN_113 -to SRAM_D[11]
-set_location_assignment PIN_112 -to SRAM_D[12]
-set_location_assignment PIN_62 -to SRAM_D[13]
-set_location_assignment PIN_76 -to SRAM_D[14]
-set_location_assignment PIN_74 -to SRAM_D[15]
-set_location_assignment PIN_75 -to SRAM_LB_N
-set_location_assignment PIN_93 -to SRAM_UB_N
-set_location_assignment PIN_92 -to SRAM_OE_N
-set_location_assignment PIN_77 -to SRAM_A[15]
-set_location_assignment PIN_78 -to SRAM_A[16]
-set_location_assignment PIN_81 -to SRAM_A[17]
 
 # FFC connector
 set_location_assignment PIN_79 -to FFC1

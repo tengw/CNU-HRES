@@ -30,3 +30,34 @@
 *.exe
 *.out
 *.app
+
+# Ignore list for Quartus II generated files
+
+*.bak
+*.cmp
+*.done
+*.eqn
+*.hex
+*.html
+*.jdi
+*.mif
+*.pin
+*.pof
+*.ptf.*
+*.qar
+*.log
+*.qws
+*.rpt
+*.smsg
+*.sof
+*.sopc_builder
+*.summary
+*.tcl
+
+# ignore Quartus II generated folders
+
+*.asm.*
+*.cmp.*
+*.zip
+
+
