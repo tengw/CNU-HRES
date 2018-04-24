@@ -1,0 +1,21 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "t16_LED0",
+					"strict" : false
+				},
+				{
+					"name" : "b18",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50Mhz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
