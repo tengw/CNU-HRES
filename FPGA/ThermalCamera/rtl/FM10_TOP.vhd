@@ -52,21 +52,25 @@ ENTITY FM10_TOP is port(
     RST_N : in std_logic;
 
     tb8  : inout std_logic;
-    tb9  : inout std_logic;
-    tb11 : inout std_logic;
-    tb17 : inout std_logic; -- IMU_I2C_SCL
-    tb19 : inout std_logic; -- IMU_I2C_SDA
+	 
+	 -- IMU I2C interface: 
+    IMU_I2C_SDA  : inout std_logic; --tb9
+    IMU_I2C_SCL : inout std_logic;  --tb11
+	 -- IMU_INT, Connected to MCU's PIN #48: PB2
+    
+	 tb17 : inout std_logic; 
+    tb19 : inout std_logic; 
 
-    t14  : inout std_logic;
+    --t14  : inout std_logic; = USB_NSS
     t16_LED0:inout std_logic;
-    t18  : inout std_logic;
-    t20  : inout std_logic;
-    t24  : inout std_logic;
-    t26  : inout std_logic;
-    t27  : inout std_logic;
-    t28  : inout std_logic;
-    t29  : inout std_logic;
-    t30  : inout std_logic;
+    --t18  : inout std_logic; = USB_MOSI[3]
+    --t20  : inout std_logic; = USB_MOSI[1]
+    --t24  : inout std_logic; = USB_SCLK
+    --t26  : inout std_logic; = USB_MOSI[0]
+    --t27  : inout std_logic; = TCAM_UART_RX
+    --t28  : inout std_logic; = USB_MOSI[2]
+    --t29  : inout std_logic; = TCAM_UART_TX
+    --t30  : inout std_logic; = USB_MISO
 
     b14  : inout std_logic;
     b16  : inout std_logic;
@@ -79,35 +83,30 @@ ENTITY FM10_TOP is port(
     b29  : inout std_logic;
     b30  : inout std_logic;
 	 
+	 -- USB connector on mother board:
+	 -- 4-bit SPI to USB 2.0
+	 USB_MOSI : out std_logic_vector (3 downto 0);
+	 USB_MISO : in  std_logic;
+	 USB_NSS  : out std_logic;
+	 USB_SCLK : out std_logic;
+	 
+	 
     -- FTDI USB-UART Connector
     USB_UART_TX : out std_logic;
     USB_UART_RX : in  std_logic;
+	 
 
     -- 24-pin FFC connector
-    FFC1 : inout std_logic;
-    FFC2 : inout std_logic;
-    FFC3 : inout std_logic;
-    FFC4 : inout std_logic;
-    FFC5 : inout std_logic;
-    FFC6 : inout std_logic;
-    FFC7 : inout std_logic;
-    FFC8 : inout std_logic;
-    FFC9 : inout std_logic;
-    FFC10: inout std_logic;
-    --FFC11: 3.3V DC
-    --FFC12: 3.3v DC
-    --FFC13: GND
-    --FFC14: GND
-    FFC15 : inout std_logic;
-    FFC16 : inout std_logic;
-    FFC17 : inout std_logic;
-    FFC18 : inout std_logic;
-    FFC19 : inout std_logic;
-    FFC20 : inout std_logic;
-    FFC21 : inout std_logic;
-    FFC22 : inout std_logic;
-    FFC23 : inout std_logic;
-    FFC24 : inout std_logic;
+    TCAM_CLK   : in std_logic;
+    TCAM_VSYNC : in std_logic;
+	 TCAM_HSYNC : in std_logic;
+    TCAM_D     : in std_logic_vector (13 downto 0);
+    TCAM_GPIO  : inout std_logic;  -- Camera PIN #25
+	 TCAM_UART_RX : out std_logic;
+	 TCAM_UART_TX : in std_logic;
+    
+    FFC3 : in std_logic;  --locked at LOW
+    FFC7 : in std_logic;  --locked at LOW
 	 
     -- CAN BUS
     CAN_SHDN : out std_logic;

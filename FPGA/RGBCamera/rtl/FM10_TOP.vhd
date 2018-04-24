@@ -52,8 +52,8 @@ ENTITY FM10_TOP is port(
     RST_N : in std_logic;
 
     tb8  : inout std_logic;
-    tb9  : inout std_logic;
-    tb11 : inout std_logic;
+    --tb9  : inout std_logic; = IMU_I2C_SDA
+    --tb11 : inout std_logic; = IMU_I2C_SCL
 	 
     CAM_SCL : inout std_logic; -- tb17
     CAM_SDA : inout std_logic; -- tb19
@@ -80,6 +80,11 @@ ENTITY FM10_TOP is port(
     b29  : inout std_logic;
     b30  : inout std_logic;
 	 
+	 	 -- IMU I2C interface: 
+    IMU_I2C_SDA  : inout std_logic; --tb9
+    IMU_I2C_SCL : inout std_logic;  --tb11
+	 -- IMU_INT, Connected to MCU's PIN #48: PB2
+	 
     -- FTDI USB-UART Connector
     USB_UART_TX : out std_logic;
     USB_UART_RX : in  std_logic;
@@ -95,7 +100,7 @@ ENTITY FM10_TOP is port(
     CAM_OE_BAR      : out std_logic;
     CAM_STANDBY     : out std_logic;
 
-    FFC20 : in std_logic;
+    FFC20 : in std_logic; -- Locked at LOW
 
     -- CAN BUS
     CAN_SHDN : out std_logic;

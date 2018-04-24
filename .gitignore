@@ -31,6 +31,7 @@
 *.out
 *.app
 
+
 # Ignore list for Quartus II generated files
 
 *.bak
@@ -56,8 +57,12 @@
 
 # ignore Quartus II generated folders
 
-*.asm.*
-*.cmp.*
+db/
+incremental_db/
+simulation/
+timing/
+greybox_tmp/
+output_files/
+MotorController/FPGA/MN1806_FPGA_O/output_file.map
 *.zip
-
 
